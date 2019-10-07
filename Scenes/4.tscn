@@ -30,6 +30,7 @@ extents = Vector2( 99.5239, 48.4035 )
 [node name="4" type="Node2D"]
 
 [node name="Question" type="Sprite" parent="."]
+position = Vector2( 0, 50 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -37,10 +38,11 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 480, 20 )
+position = Vector2( 480, 70 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -60,7 +62,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 670, 55 )
+position = Vector2( 670, 105 )
 scale = Vector2( 8, 1 )
 script = ExtResource( 2 )
 
@@ -82,28 +84,28 @@ __meta__ = {
 scale = Vector2( 1.01404, 1 )
 
 [node name="4a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 775.391, 507.276 )
+position = Vector2( 206.104, 448.432 )
 
 [node name="4b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 714.36, 333.788 )
+position = Vector2( 225.113, 668.59 )
 
 [node name="4c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 334.169, 292.191 )
+position = Vector2( 224.113, 312.482 )
 
 [node name="4d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 224.113, 358.137 )
+position = Vector2( 210.106, 361.181 )
 
 [node name="4e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 675.34, 399.733 )
+position = Vector2( 200.1, 400.748 )
 
 [node name="4f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 493.249, 460.606 )
+position = Vector2( 370.187, 517.421 )
 
 [node name="4g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 253.128, 527.567 )
+position = Vector2( 234.118, 568.149 )
 
 [node name="4h" parent="Parts" instance=ExtResource( 11 )]
-position = Vector2( 493.249, 586.411 )
+position = Vector2( 474.239, 623.949 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true
@@ -152,3 +154,11 @@ visible = false
 position = Vector2( 860, 263 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 17 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 540.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A function that checks if a given list, of any type,  is a palindromic "
+align = 1
+valign = 1

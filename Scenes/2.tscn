@@ -34,7 +34,17 @@ extents = Vector2( 99.5239, 48.4035 )
 
 [node name="2" type="Node2D"]
 
+[node name="Title" type="Label" parent="."]
+margin_right = 656.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A reversing function that takes a list of any type and reverses all the entires so the tail is at the head:"
+align = 1
+valign = 1
+
 [node name="Question" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 50 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -42,11 +52,11 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
-editor/display_folded = true
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 370, 15 )
+position = Vector2( 370, 65 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -66,7 +76,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 240, 53 )
+position = Vector2( 240, 103 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Question/Slots/Slot2"]
@@ -85,7 +95,7 @@ __meta__ = {
 
 [node name="Slot3" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 450, 88 )
+position = Vector2( 450, 138 )
 scale = Vector2( 2, 1.15412 )
 script = ExtResource( 2 )
 
@@ -107,34 +117,34 @@ __meta__ = {
 scale = Vector2( 1.01404, 1 )
 
 [node name="2a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 542.068, 627.893 )
+position = Vector2( 372.806, 332.414 )
 
 [node name="2b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 167.12, 765.856 )
+position = Vector2( 102.843, 405.198 )
 
 [node name="2c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 778.821, 416.061 )
+position = Vector2( 258.179, 606.167 )
 
 [node name="2d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 191.759, 694.159 )
+position = Vector2( 667.407, 338.932 )
 
 [node name="2e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 184.26, 618.116 )
+position = Vector2( 117.841, 333.5 )
 
 [node name="2f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 547.424, 460.6 )
+position = Vector2( 213.185, 556.196 )
 
 [node name="2g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 291.388, 557.282 )
+position = Vector2( 314.956, 711.539 )
 
 [node name="2h" parent="Parts" instance=ExtResource( 11 )]
-position = Vector2( 194.042, 467.132 )
+position = Vector2( 332.237, 407.384 )
 
 [node name="2i" parent="Parts" instance=ExtResource( 12 )]
-position = Vector2( 299.95, 368.749 )
+position = Vector2( 306.378, 489.331 )
 
 [node name="2j" parent="Parts" instance=ExtResource( 13 )]
-position = Vector2( 275.51, 301.908 )
+position = Vector2( 279.795, 654.962 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true

@@ -47,8 +47,18 @@ extents = Vector2( 99.5239, 48.4035 )
 
 [node name="1" type="Node2D"]
 
+[node name="Title" type="Label" parent="."]
+margin_right = 572.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Create a quicksort fuction that takes a list on any type and returns the ordered list"
+align = 1
+valign = 1
+
 [node name="Question" type="Sprite" parent="."]
 editor/display_folded = true
+position = Vector2( 0, 50 )
+z_index = -1
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -57,10 +67,11 @@ __meta__ = {
 
 [node name="Slots" type="Node2D" parent="Question"]
 editor/display_folded = true
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 440, 18 )
+position = Vector2( 440, 68 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -80,7 +91,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 240, 53 )
+position = Vector2( 240, 103 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Question/Slots/Slot2"]
@@ -99,7 +110,7 @@ __meta__ = {
 
 [node name="Slot3" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 450, 127 )
+position = Vector2( 450, 177 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 2 )
 
@@ -119,7 +130,7 @@ __meta__ = {
 
 [node name="Slot4" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 370, 160 )
+position = Vector2( 370, 210 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 2 )
 
@@ -139,7 +150,7 @@ __meta__ = {
 
 [node name="Slot5" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 550, 198 )
+position = Vector2( 550, 248 )
 scale = Vector2( 3, 1 )
 script = ExtResource( 2 )
 
@@ -161,60 +172,61 @@ __meta__ = {
 editor/display_folded = true
 
 [node name="1a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 199.278, 263.519 )
+position = Vector2( 233.93, 347.839 )
 
 [node name="1b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 93.1787, 538.753 )
+position = Vector2( 252.578, 442.882 )
 
 [node name="1c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 357.313, 498.855 )
+position = Vector2( 778.912, 489.614 )
 
 [node name="1d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 270.548, 439.362 )
+position = Vector2( 299.425, 582.59 )
 
 [node name="1e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 468.362, 382.008 )
+position = Vector2( 500.78, 706.865 )
 
 [node name="1f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 809.582, 331.565 )
+position = Vector2( 225.137, 398.559 )
 
 [node name="1g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 372.572, 659.616 )
+position = Vector2( 348.372, 666.754 )
 
 [node name="1h" parent="Parts" instance=ExtResource( 11 )]
-position = Vector2( 228.464, 760.374 )
+position = Vector2( 224.999, 490.088 )
 
 [node name="1i" parent="Parts" instance=ExtResource( 12 )]
-position = Vector2( 753.344, 438.182 )
+position = Vector2( 775.29, 534.052 )
 
 [node name="1j" parent="Parts" instance=ExtResource( 13 )]
-position = Vector2( 490.904, 602.207 )
+position = Vector2( 501.262, 623.187 )
 
 [node name="1k" parent="Parts" instance=ExtResource( 14 )]
-position = Vector2( 740.457, 761.546 )
+position = Vector2( 838.638, 581.356 )
 
 [node name="1l" parent="Parts" instance=ExtResource( 15 )]
-position = Vector2( 274.157, 324.536 )
+position = Vector2( 303.034, 537.068 )
 
 [node name="1m" parent="Parts" instance=ExtResource( 16 )]
-position = Vector2( 695.936, 551.828 )
+position = Vector2( 887.677, 348.536 )
 
 [node name="1n" parent="Parts" instance=ExtResource( 17 )]
-position = Vector2( 480.36, 712.338 )
+position = Vector2( 482.708, 747.387 )
 
 [node name="1o" parent="Parts" instance=ExtResource( 18 )]
-position = Vector2( 630.326, 267.127 )
+position = Vector2( 534.455, 343.361 )
 
 [node name="1p" parent="Parts" instance=ExtResource( 19 )]
-position = Vector2( 863.476, 492.076 )
+position = Vector2( 566.624, 398.516 )
 
 [node name="1q" parent="Parts" instance=ExtResource( 20 )]
-position = Vector2( 326.879, 541.283 )
+position = Vector2( 103.951, 445.412 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true
 visible = false
-position = Vector2( 904, 76 )
+position = Vector2( 1138.48, 118.737 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="Next"]
@@ -231,7 +243,7 @@ __meta__ = {
 
 [node name="Solved" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 953.134, 262.19 )
+position = Vector2( 1137.94, 49.6578 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 23 )
 
@@ -249,12 +261,12 @@ __meta__ = {
 
 [node name="Incorrect" type="Sprite" parent="."]
 visible = false
-position = Vector2( 860, 263 )
+position = Vector2( 1040.19, 51.6228 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 25 )
 
 [node name="Correct" type="Sprite" parent="."]
 visible = false
-position = Vector2( 860, 263 )
+position = Vector2( 1040.19, 51.6228 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 26 )

@@ -4,9 +4,9 @@
 [ext_resource path="res://Scripts/Slot.gd" type="Script" id=2]
 [ext_resource path="res://Images/block.png" type="Texture" id=3]
 [ext_resource path="res://Parts/3a.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Parts/3b.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Parts/3d.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Parts/3c.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Parts/3d.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Parts/3b.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Parts/3e.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Parts/3f.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Parts/3g.tscn" type="PackedScene" id=10]
@@ -34,7 +34,17 @@ extents = Vector2( 99.5239, 48.4035 )
 
 [node name="3" type="Node2D"]
 
+[node name="Title" type="Label" parent="."]
+margin_right = 763.0
+margin_bottom = 61.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A function which inserts an element of any type into a specified position in a list of the same type as the element:"
+align = 1
+valign = 1
+
 [node name="Question" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0, 50 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -42,10 +52,12 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+editor/display_folded = true
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 420, 22 )
+position = Vector2( 420, 72 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -65,7 +77,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 280, 58 )
+position = Vector2( 280, 108 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 2 )
 
@@ -85,7 +97,7 @@ __meta__ = {
 
 [node name="Slot3" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 510, 93 )
+position = Vector2( 510, 143 )
 scale = Vector2( 2, 1.15412 )
 script = ExtResource( 2 )
 
@@ -107,34 +119,34 @@ __meta__ = {
 scale = Vector2( 1.01404, 1 )
 
 [node name="3a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 758.382, 499.159 )
+position = Vector2( 224.113, 374.369 )
 
 [node name="3b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 150.076, 450.461 )
+position = Vector2( 143.072, 506.261 )
 
 [node name="3c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 641.323, 329.729 )
+position = Vector2( 345.174, 552.93 )
 
 [node name="3d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 138.07, 312.482 )
+position = Vector2( 139.07, 460.607 )
 
 [node name="3e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 323.163, 377.413 )
+position = Vector2( 332.168, 596.556 )
 
 [node name="3f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 663.335, 442.345 )
+position = Vector2( 357.181, 682.794 )
 
 [node name="3g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 501.253, 571.193 )
+position = Vector2( 222.112, 301.322 )
 
 [node name="3h" parent="Parts" instance=ExtResource( 11 )]
-position = Vector2( 193.097, 516.407 )
+position = Vector2( 192.096, 329.729 )
 
 [node name="3i" parent="Parts" instance=ExtResource( 12 )]
-position = Vector2( 133.067, 581.338 )
+position = Vector2( 127.064, 421.039 )
 
 [node name="3j" parent="Parts" instance=ExtResource( 13 )]
-position = Vector2( 362.183, 632.066 )
+position = Vector2( 376.19, 635.11 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true

@@ -19,7 +19,7 @@ func _input_event(viewport, event, shape_idx):
 		incorrect.hide()
 
 		next.hide()
-		if slot1.checkSol() and slot2.checkSol() and (slot3 == null or slot3.checkSol()) and (slot4 == null or slot4.checkSol()) and (slot5 == null or slot5.checkSol()):
+		if slot1.checkSol() and (slot2 == null or slot2.checkSol()) and (slot3 == null or slot3.checkSol()) and (slot4 == null or slot4.checkSol()) and (slot5 == null or slot5.checkSol()):
 			print("correct")
 			correct.show()
 			next.show()

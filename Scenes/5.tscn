@@ -36,6 +36,7 @@ extents = Vector2( 99.5239, 48.4035 )
 [node name="5" type="Node2D"]
 
 [node name="Question" type="Sprite" parent="."]
+position = Vector2( 0, 50 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -43,10 +44,11 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 500, 18 )
+position = Vector2( 500, 68 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -66,7 +68,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 288.116, 53 )
+position = Vector2( 288.116, 103 )
 scale = Vector2( 2, 1 )
 script = ExtResource( 2 )
 
@@ -86,7 +88,7 @@ __meta__ = {
 
 [node name="Slot3" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 648.994, 86.9127 )
+position = Vector2( 648.994, 137 )
 scale = Vector2( 2, 1.15412 )
 script = ExtResource( 2 )
 
@@ -106,7 +108,7 @@ __meta__ = {
 
 [node name="Slot4" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 670, 128 )
+position = Vector2( 670, 178 )
 scale = Vector2( 2.5, 1.154 )
 script = ExtResource( 2 )
 
@@ -128,37 +130,37 @@ __meta__ = {
 scale = Vector2( 1.01404, 1 )
 
 [node name="5a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 236.119, 282.045 )
+position = Vector2( 244.123, 291.176 )
 
 [node name="5b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 828.418, 472.781 )
+position = Vector2( 317.16, 419.01 )
 
 [node name="5c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 711.359, 317.555 )
+position = Vector2( 267.135, 501.189 )
 
 [node name="5d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 718.362, 408.864 )
+position = Vector2( 297.15, 703.084 )
 
 [node name="5e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 806.407, 532.64 )
+position = Vector2( 164.083, 380.457 )
 
 [node name="5f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 305.154, 366.253 )
+position = Vector2( 296.15, 334.802 )
 
 [node name="5g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 106.053, 413.937 )
+position = Vector2( 114.057, 420.024 )
 
 [node name="5h" parent="Parts" instance=ExtResource( 11 )]
 position = Vector2( 256.129, 458.577 )
 
 [node name="5i" parent="Parts" instance=ExtResource( 12 )]
-position = Vector2( 300.151, 504.232 )
+position = Vector2( 297.149, 598.585 )
 
 [node name="5j" parent="Parts" instance=ExtResource( 13 )]
-position = Vector2( 305.154, 553.945 )
+position = Vector2( 293.148, 657.429 )
 
 [node name="5k" parent="Parts" instance=ExtResource( 14 )]
-position = Vector2( 272.137, 596.556 )
+position = Vector2( 259.13, 546.843 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true
@@ -207,3 +209,11 @@ visible = false
 position = Vector2( 860, 263 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 20 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 633.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A function that removes all entries of a certain element from a list and returns the new list"
+align = 1
+valign = 1

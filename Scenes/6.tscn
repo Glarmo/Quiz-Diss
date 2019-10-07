@@ -29,6 +29,7 @@ extents = Vector2( 99.5239, 48.4035 )
 [node name="6" type="Node2D"]
 
 [node name="Question" type="Sprite" parent="."]
+position = Vector2( 0, 50 )
 texture = ExtResource( 1 )
 centered = false
 __meta__ = {
@@ -36,10 +37,12 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+editor/display_folded = true
+position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 480, 20 )
+position = Vector2( 480, 70 )
 scale = Vector2( 1.5, 1 )
 script = ExtResource( 2 )
 
@@ -59,7 +62,7 @@ __meta__ = {
 
 [node name="Slot2" type="Area2D" parent="Question/Slots"]
 editor/display_folded = true
-position = Vector2( 670, 90 )
+position = Vector2( 670, 140 )
 scale = Vector2( 8, 1 )
 script = ExtResource( 2 )
 
@@ -81,25 +84,25 @@ __meta__ = {
 scale = Vector2( 1.01404, 1 )
 
 [node name="6a" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 178.09, 403.792 )
+position = Vector2( 150.076, 346.977 )
 
 [node name="6b" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 376.19, 513.363 )
+position = Vector2( 364.184, 500.174 )
 
 [node name="6c" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 368.186, 355.093 )
+position = Vector2( 363.183, 569.163 )
 
 [node name="6d" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 353.178, 618.877 )
+position = Vector2( 331.167, 626.993 )
 
 [node name="6e" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 331.167, 452.49 )
+position = Vector2( 318.16, 435.243 )
 
 [node name="6f" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 173.087, 688.881 )
+position = Vector2( 880.444, 341.904 )
 
 [node name="6g" parent="Parts" instance=ExtResource( 10 )]
-position = Vector2( 169.085, 564.091 )
+position = Vector2( 499.252, 345.962 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true
@@ -148,3 +151,12 @@ visible = false
 position = Vector2( 860, 263 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 16 )
+
+[node name="Title" type="Label" parent="."]
+margin_right = 848.0
+margin_bottom = 56.0
+rect_scale = Vector2( 1, 0.99229 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A function that returns a list of the distances between sequential numbers in a list only if the second number is larger than the first"
+align = 1
+valign = 1
