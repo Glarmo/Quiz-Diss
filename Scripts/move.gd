@@ -2,9 +2,11 @@ extends Area2D
 
 var clicked = false
 var ogPos
+var width
 
 func _ready():
 	ogPos = position
+	width = get_node("Sprite").get_texture().get_width()
 	pass
 
 func _input_event(viewport, event, shape_idx):
@@ -23,5 +25,6 @@ func _process(delta):
 	elif !clicked:
 		position = ogPos
 		for area in areas:
-			if area.name == "Slot1" || area.name == "Slot2" || area.name == "Slot3" || area.name == "Slot4" || area.name == "Slot5":
-				position = area.position
+			if (area.name == "Slot1" || area.name == "Slot2" || area.name == "Slot3" || area.name == "Slot4" || area.name == "Slot5" || area.name == "Slot6") and areas.size() <= 1:
+				position.y = area.position.y
+				position.x = area.position.x + (width/2 - 50*(area.get_scale().x)) #This puts the part at the left most of the slot
