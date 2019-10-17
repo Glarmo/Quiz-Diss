@@ -108,19 +108,19 @@ __meta__ = {
 [node name="Parts" type="Node2D" parent="."]
 scale = Vector2( 1.01404, 1 )
 
-[node name="8b" parent="Parts" instance=ExtResource( 4 )]
+[node name="10d" parent="Parts" instance=ExtResource( 4 )]
 position = Vector2( 134.168, 481.912 )
 
-[node name="8c" parent="Parts" instance=ExtResource( 5 )]
+[node name="10e" parent="Parts" instance=ExtResource( 5 )]
 position = Vector2( 133.067, 429.155 )
 
-[node name="8h" parent="Parts" instance=ExtResource( 6 )]
+[node name="10f" parent="Parts" instance=ExtResource( 6 )]
 position = Vector2( 62.0313, 481.912 )
 
-[node name="8i" parent="Parts" instance=ExtResource( 7 )]
+[node name="10g" parent="Parts" instance=ExtResource( 7 )]
 position = Vector2( 60.0303, 429.155 )
 
-[node name="8j" parent="Parts" instance=ExtResource( 8 )]
+[node name="10b" parent="Parts" instance=ExtResource( 8 )]
 position = Vector2( 94.0475, 383.501 )
 
 [node name="10a" parent="Parts" instance=ExtResource( 9 )]
@@ -129,10 +129,10 @@ position = Vector2( 105.068, 577.466 )
 [node name="10c" parent="Parts" instance=ExtResource( 10 )]
 position = Vector2( 84.0546, 306.845 )
 
-[node name="10f" parent="Parts" instance=ExtResource( 11 )]
+[node name="10h" parent="Parts" instance=ExtResource( 11 )]
 position = Vector2( 109.271, 534.848 )
 
-[node name="10g" parent="Parts" instance=ExtResource( 12 )]
+[node name="10i" parent="Parts" instance=ExtResource( 12 )]
 position = Vector2( 77.7505, 344.135 )
 
 [node name="Next" type="Area2D" parent="."]
