@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Images/Parts/16.png" type="Texture" id=1]
+[ext_resource path="res://Images/Parts/19.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Slot.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Next.gd" type="Script" id=3]
 [ext_resource path="res://Images/Next.png" type="Texture" id=4]
@@ -31,12 +31,17 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TextSlot" type="TextEdit" parent="Question"]
+[node name="Slots" type="Node2D" parent="Question"]
+
+[node name="TextSlot" type="Area2D" parent="Question/Slots"]
+position = Vector2( 55.8705, 92.7335 )
+script = ExtResource( 2 )
+
+[node name="Box" type="TextEdit" parent="Question/Slots/TextSlot"]
 margin_left = 63.0
 margin_top = 79.0
-margin_right = 220.0
-margin_bottom = 119.0
-script = ExtResource( 2 )
+margin_right = 356.0
+margin_bottom = 109.0
 
 [node name="Parts" type="Node2D" parent="."]
 position = Vector2( 0, -1.01454 )
@@ -45,7 +50,8 @@ scale = Vector2( 1.01404, 1 )
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true
 visible = false
-position = Vector2( 904, 76 )
+position = Vector2( 1073.76, 261.496 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Next"]

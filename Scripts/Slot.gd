@@ -36,12 +36,18 @@ var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 [["17a"],["17b"],["17c"],["17d"],["17e"],["17f"],["17g"]],
 #q18
 [["18a"],["18b"],["18c1","18c2"],["18d"],["18e"],["18f"],["18g"],["18h"]],
+#q19
+[["syc"]],
+#q20
+[["20a"],["20b"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20g"],["20h"],["20i"],["20j"],["20k"],["20l"]],
 ]
 
 
 func checkSol():
 	var key = get_parent().get_parent().get_parent().get_name()
 	var areas = get_overlapping_areas()
+	if name == "TextSlot" and checkAll(get_child(0).text, cheatSheet[int(key)][0]):
+		return true
 	for area in areas:
 		var asw = area.name
 		if name == "Slot1" and checkAll(asw,cheatSheet[int(key)][0]):

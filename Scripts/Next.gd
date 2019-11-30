@@ -1,5 +1,5 @@
 extends Area2D
-var levelOrder = [7,8,9,10,2,4,3,5,1,6]
+var levelOrder = [7,8,9,10,11,15,12,17,18,16,14,13]
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \

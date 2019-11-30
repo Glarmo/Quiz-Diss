@@ -199,7 +199,7 @@ position = Vector2( 138.69, 662.7 )
 position = Vector2( 208.035, 661.635 )
 
 [node name="11b" parent="Parts" instance=ExtResource( 7 )]
-position = Vector2( 65.1424, 606.232 )
+position = Vector2( 64.5262, 606.232 )
 
 [node name="Next" type="Area2D" parent="."]
 editor/display_folded = true

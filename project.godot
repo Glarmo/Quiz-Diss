@@ -16,13 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Quiz"
-run/main_scene="res://Scenes/1.tscn"
+run/main_scene="res://Scenes/7.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Player_param="*res://Scripts/Player_param.gd"
 
 [display]
 
-window/size/width=1200
-window/size/height=790
+window/size/width=960
+window/size/height=540
+window/stretch/mode="2d"
 
 [rendering]
 

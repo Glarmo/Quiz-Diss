@@ -40,7 +40,6 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
-editor/display_folded = true
 position = Vector2( 0, -50 )
 
 [node name="Slot1" type="Area2D" parent="Question/Slots"]
