@@ -3,7 +3,11 @@ extends KinematicBody2D
 var movedir = Vector2()
 var interactable
 var target
-onready var camera2 = get_node("Camera2D")
+var camera2
+
+func _ready():
+	camera2 = get_node("Camera2D")
+	position = Player_param.player_pos
 
 func _physics_process(delta):
 	#State Machine
@@ -33,17 +37,17 @@ func controls_movement_loop():
 	movedir.y = -int(up) + int(down)
 	movedir = movedir.normalized() * Player_param.speed
 	move_and_slide(movedir)
+	Player_param.player_pos = position
 	
 func interact_loop():
 	if (interactable and Input.is_action_just_pressed("ui_select")):
 		print ("interacting with: "+ target.get_name())
 		
-		#Start dialogue
-		get_node("../../Parser").start_dialogue(target)
 		#Passes the inventory to the object for any checks
 		target.action(Player_param.inv)
 		#Changes the player state
 		Player_param.state = "message"
+		get_node("../../Parser").start_dialogue(target)
 		
 		#Adds an item to the inventory
 		if (target.is_in_group("Item") and Player_param.inv.find(target.get_name()) < 0):

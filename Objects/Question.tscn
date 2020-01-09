@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Computer.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Object.gd" type="Script" id=1]
 [ext_resource path="res://Images/block.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -9,8 +9,9 @@ extents = Vector2( 57.9755, 46.512 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 25.2008, 25.0719 )
 
-[node name="Computer" type="Node2D" groups=[
+[node name="Question" type="Node2D" groups=[
 "Interactable",
+"Question",
 ]]
 script = ExtResource( 1 )
 
@@ -25,6 +26,5 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-modulate = Color( 0.45098, 0.160784, 0.160784, 1 )
-position = Vector2( 0.136566, 0 )
+modulate = Color( 0, 0.572549, 0.196078, 1 )
 texture = ExtResource( 2 )

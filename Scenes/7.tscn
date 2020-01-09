@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Images/Parts/7.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Slot.gd" type="Script" id=2]
@@ -9,10 +9,11 @@
 [ext_resource path="res://Parts/7d.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/Next.gd" type="Script" id=8]
 [ext_resource path="res://Images/Next.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Check.gd" type="Script" id=10]
-[ext_resource path="res://Images/Solved.png" type="Texture" id=11]
-[ext_resource path="res://Images/wrong.png" type="Texture" id=12]
-[ext_resource path="res://Images/correct.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/Leave.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Check.gd" type="Script" id=11]
+[ext_resource path="res://Images/Solved.png" type="Texture" id=12]
+[ext_resource path="res://Images/wrong.png" type="Texture" id=13]
+[ext_resource path="res://Images/correct.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.8284, 11.8212 )
@@ -42,7 +43,9 @@ __meta__ = {
 [node name="Slots" type="Node2D" parent="Question"]
 position = Vector2( 0, -50 )
 
-[node name="Slot1" type="Area2D" parent="Question/Slots"]
+[node name="Slot1" type="Area2D" parent="Question/Slots" groups=[
+"Slot",
+]]
 editor/display_folded = true
 position = Vector2( 85.3394, 115.655 )
 scale = Vector2( 1.5, 1 )
@@ -63,7 +66,6 @@ __meta__ = {
 }
 
 [node name="Parts" type="Node2D" parent="."]
-editor/display_folded = true
 scale = Vector2( 1.01404, 1 )
 
 [node name="7a" parent="Parts" instance=ExtResource( 4 )]
@@ -79,7 +81,6 @@ position = Vector2( 85.0429, 413.937 )
 position = Vector2( 64.0323, 365.239 )
 
 [node name="Next" type="Area2D" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 845.467, 62.1798 )
 script = ExtResource( 8 )
@@ -96,14 +97,31 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Leave" type="Area2D" parent="."]
+visible = false
+position = Vector2( 845.467, 62.1798 )
+script = ExtResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Leave"]
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leave"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Solved" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 777.536, 210.974 )
 scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="Solved"]
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -118,17 +136,10 @@ __meta__ = {
 visible = false
 position = Vector2( 860, 263 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="Correct" type="Sprite" parent="."]
 visible = false
 position = Vector2( 860, 263 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 13 )
-
-[node name="Background" type="Sprite" parent="."]
-modulate = Color( 0.545098, 0.545098, 0.545098, 1 )
-position = Vector2( 481.676, 269.495 )
-scale = Vector2( 19.1939, 10.7717 )
-z_index = -5
-texture = ExtResource( 3 )
+texture = ExtResource( 14 )

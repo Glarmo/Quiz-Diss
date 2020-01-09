@@ -1,4 +1,8 @@
 extends Area2D
+var p_number
+var s_number
+var areas
+var occupied = false
 var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 #q1
 [],
@@ -6,7 +10,7 @@ var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 [],
 #q3
 [],
-#q4m
+#q4
 [],
 #q5
 [],
@@ -40,47 +44,51 @@ var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 [["syc"]],
 #q20
 [["20a"],["20b"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20c","20d","20e","20f"],["20g"],["20h"],["20i"],["20j"],["20k"],["20l"]],
+#q21
+[["14a"],["14b1","14b2"],["14c"],["14d1","14d2"],["14e"],["14f"],["14g","14j"],["14h"],["14i"],["14j","14g"],["14k"],["14l"]],
 ]
 
+func _ready():
+	p_number = int(get_owner().get_name())
+	s_number = int(name.right(4)) - 1
 
-func checkSol():
-	var key = get_parent().get_parent().get_parent().get_name()
-	var areas = get_overlapping_areas()
-	if name == "TextSlot" and checkAll(get_child(0).text, cheatSheet[int(key)][0]):
-		return true
-	for area in areas:
-		var asw = area.name
-		if name == "Slot1" and checkAll(asw,cheatSheet[int(key)][0]):
-			return true
-		elif name == "Slot2" and checkAll(asw,cheatSheet[int(key)][1]):
-			return true
-		elif name == "Slot3" and checkAll(asw,cheatSheet[int(key)][2]):
-			return true
-		elif name == "Slot4" and checkAll(asw,cheatSheet[int(key)][3]):
-			return true
-		elif name == "Slot5" and checkAll(asw,cheatSheet[int(key)][4]):
-			return true
-		elif name == "Slot6" and checkAll(asw,cheatSheet[int(key)][5]):
-			return true
-		elif name == "Slot7" and checkAll(asw,cheatSheet[int(key)][6]):
-			return true
-		elif name == "Slot8" and checkAll(asw,cheatSheet[int(key)][7]):
-			return true
-		elif name == "Slot9" and checkAll(asw,cheatSheet[int(key)][8]):
-			return true
-		elif name == "Slot10" and checkAll(asw,cheatSheet[int(key)][9]):
-			return true
-		elif name == "Slot11" and checkAll(asw,cheatSheet[int(key)][10]):
-			return true
-		elif name == "Slot12" and checkAll(asw,cheatSheet[int(key)][11]):
-			return true
-		else:
-			print(name +"/"+ asw)
-			print(cheatSheet[int(key)])
-			return false
+func check_solution():
+	areas = get_overlapping_areas()
+	if (!occupied):
+		return false 
+	elif (name == "TextSlot"):
+		return checkAll(get_child(0).text, cheatSheet[p_number][0])
+	else:
+		for area in areas:
+			var answer = area.name
+			if checkAll(answer, cheatSheet[p_number][s_number]):
+				return true
+			else:
+				#Here is when we know a mistake has been made
+				#I should create a function that outputs some kind of feedback
+				#Most feedback will be question specific but some can be general i.e. "Remember what x just told you!"
+				print(name +"/"+ answer)
+				return false
 
 #Runs through a list and checks if an item exists in it
-func checkAll(area, list):
-	for a in list:
-		if area == a:
+func checkAll(answer, list):
+	for solution in list:
+		if answer == solution:
 			return true
+
+func filled():
+	occupied = true
+
+func unfilled():
+	occupied = false
+
+func is_occupied():
+	return occupied
+	
+#TEST FUNCTION FOR THE BOX BUG!!!!!!
+func _input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton \
+	and event.button_index == BUTTON_LEFT \
+	and event.is_pressed():
+		print(self.name +" - Clicked ")
+		

@@ -10,8 +10,8 @@ extents = Vector2( 57.9755, 46.512 )
 extents = Vector2( 25.2008, 25.0719 )
 
 [node name="Item" type="Node2D" groups=[
-"Interactable",
 "Item",
+"Interactable",
 ]]
 script = ExtResource( 1 )
 

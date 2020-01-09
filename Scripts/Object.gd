@@ -10,3 +10,8 @@ func action(inv):
 	pass
 func _ready():
 	pass
+func search(list, x):
+	if (list.find(x) != -1):
+		return true
+	else:
+		return false
