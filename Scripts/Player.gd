@@ -4,6 +4,7 @@ var movedir = Vector2()
 var interactable
 var target
 var camera2
+var facing = "Down"
 
 func _ready():
 	camera2 = get_node("Camera2D")
@@ -15,6 +16,8 @@ func _physics_process(delta):
 		"default":
 			default_state()
 		"message":
+			message_state()
+		"journal":
 			message_state()
 
 func default_state():
@@ -38,6 +41,7 @@ func controls_movement_loop():
 	movedir = movedir.normalized() * Player_param.speed
 	move_and_slide(movedir)
 	Player_param.player_pos = position
+	facing_direction()
 	
 func interact_loop():
 	if (interactable and Input.is_action_just_pressed("ui_select")):
@@ -67,3 +71,19 @@ func interactable_body_exit(body, obj):
 	if (body.get_parent().get_name() == "Player"):
 		interactable = false
 		target = null
+
+func facing_direction():
+	if movedir.y > 0:
+		facing = "Down"
+		$Sprite.play("WalkDown")
+	elif movedir.y < 0:
+		facing = "Up"
+		$Sprite.play("WalkUp")
+	elif movedir.x > 0:
+		facing = "Right"
+		$Sprite.play("WalkRight")
+	elif movedir.x < 0:
+		facing = "Left"
+		$Sprite.play("WalkLeft")
+	else:
+		$Sprite.play("Idle" + facing)

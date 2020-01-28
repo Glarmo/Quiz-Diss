@@ -6,4 +6,4 @@ func _input_event(viewport, event, shape_idx):
 	and event.is_pressed():
 		get_tree().change_scene_to(Player_param.current_scene)
 		Player_param.state = "default"
-		print(Player_param.inv)
+

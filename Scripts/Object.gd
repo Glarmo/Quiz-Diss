@@ -2,6 +2,8 @@ extends Node2D
 
 var title
 var dialogue = [[]]
+var secondDialogue = [[]]
+var thirdDialogue = [[]]
 var page = 0
 var first_time = true
 var choices = []

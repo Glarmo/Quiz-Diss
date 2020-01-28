@@ -5,15 +5,15 @@ var areas
 var occupied = false
 var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 #q1
-[],
+[["1a"],["1b","1c"],["1b","1c"]],
 #q2
-[],
+[["2a"],["2b","2c"],["2b","2c","2d"],["2b","2c","2d"]],
 #q3
-[],
+[["3a","3b","3c"],["3a","3b","3c"],["3a","3b","3c"],["3d"],["3g","3f","3e","3i"],["3g","3f","3e","3i"],["3g","3f","3e","3i"],["3h"],["3g","3f","3e","3i"]],
 #q4
-[],
+[["4a","4b","4c","4d","4e"],["4a","4b","4c","4d","4e"],["4a","4b","4c","4d","4e"],["4a","4b","4c","4d","4e"],["4a","4b","4c","4d","4e"],["4f","4i"],["4g","4h","4j","4k"],["4g","4h","4j","4k"],["4f","4i"],["4g","4h","4j","4k"],["4g","4h","4j","4k"]],
 #q5
-[],
+[["5a"]],
 #q6
 [],
 #q7
@@ -68,6 +68,7 @@ func check_solution():
 				#I should create a function that outputs some kind of feedback
 				#Most feedback will be question specific but some can be general i.e. "Remember what x just told you!"
 				print(name +"/"+ answer)
+				print(cheatSheet[p_number][s_number])
 				return false
 
 #Runs through a list and checks if an item exists in it
@@ -78,17 +79,11 @@ func checkAll(answer, list):
 
 func filled():
 	occupied = true
+	$Sprite.hide()
 
 func unfilled():
 	occupied = false
+	$Sprite.show()
 
 func is_occupied():
 	return occupied
-	
-#TEST FUNCTION FOR THE BOX BUG!!!!!!
-func _input_event(viewport, event, shape_idx):
-	if event is InputEventMouseButton \
-	and event.button_index == BUTTON_LEFT \
-	and event.is_pressed():
-		print(self.name +" - Clicked ")
-		

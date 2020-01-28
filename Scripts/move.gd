@@ -13,7 +13,6 @@ func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
 	and event.button_index == BUTTON_LEFT \
 	and event.is_pressed():
-		print(self.name +" - Clicked") #FOR TESTING PURPOSES
 		self.on_click()
 
 func _process(delta):
@@ -22,7 +21,7 @@ func _process(delta):
 		follow_mouse()
 	elif !clicked:
 		for area in areas:
-			if (areas.size() > 1): #This stops one block moving into 2 slots, preventing a bug
+			if (areas.size() > 1 && slot == null): #This stops one block moving into 2 slots, preventing a bug
 				position = ogPos
 			elif area.is_in_group("Slot") and !area.is_occupied():
 				place(area)
@@ -37,7 +36,7 @@ func place(area):
 	
 func follow_mouse():
 	position.y = get_global_mouse_position().y
-	position.x = get_global_mouse_position().x #- get_parent().get_parent().get_parent().position.x
+	position.x = get_global_mouse_position().x
 	if (slot != null):
 		slot.unfilled()
 		slot = null

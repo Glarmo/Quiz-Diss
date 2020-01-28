@@ -52,11 +52,11 @@ func create_button(entry, i):
 	choice_buttons.append(choiceButton)
 	
 	#Resizes button and label correctly
-	choiceButton.set_position(Vector2(10, 10 + 75*i))
-	choiceButton.set_size(Vector2(500,50))
+	choiceButton.set_position(Vector2(140, 20 + 60*i))
+	choiceButton.set_size(Vector2(400,50))
 	choiceLabel.set_position(Vector2(10, 10))
-	choiceLabel.set_size(Vector2(500,50))
-	#choiceLabel.set_autowrap(true)
+	choiceLabel.set_size(Vector2(400,50))
+	choiceLabel.set_autowrap(true)
 
 func branch_taken(choice):
 	currTarget.page = currTarget.choices[entry][choice][1]
@@ -69,6 +69,7 @@ func clear_buttons():
 	for button in choice_buttons:
 		button.queue_free()
 	choice_buttons.clear()
+	print("cleared")
 
 func display_entry(entry):
 	if (entry is String): #Display Text
