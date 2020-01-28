@@ -163,11 +163,13 @@ __meta__ = {
 }
 
 [node name="Incorrect" type="Sprite" parent="."]
+visible = false
 position = Vector2( 858.01, 249.553 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 16 )
 
 [node name="Correct" type="Sprite" parent="."]
+visible = false
 position = Vector2( 858.01, 249.553 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 17 )
