@@ -96,6 +96,6 @@ func add_to_journal(entry):
 		Player_param.dialogue.append(entry)
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") and panalNode.get_node("Text").is_visible() and currTarget != null:
+	if event.is_action_pressed("ui_accept") and panalNode.get_node("Text").is_visible() and panalNode.is_visible() and currTarget != null:
 		button_pressed() #This allows the user to press the 'Enter' Key to move dialogue
 
