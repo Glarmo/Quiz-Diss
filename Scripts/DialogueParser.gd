@@ -1,5 +1,6 @@
 extends Node2D
 
+var titleNode
 var panalNode
 var currTarget
 var camera
@@ -13,6 +14,7 @@ func _ready():
 	camera = get_node("../Player/KinematicBody2D/Camera2D")
 	panalNode = get_node("../CanvasLayer/Dialogue Box")
 	imageHolder = get_node("../CanvasLayer/Texture")
+	titleNode = get_node("../CanvasLayer/Dialogue Box/Panel/Title")
 	button = panalNode.get_node("Button")
 	button.connect("pressed", self, "button_pressed")
 	
@@ -32,6 +34,7 @@ func button_pressed():
 func start_dialogue(target):
 	currTarget = target
 	display_entry(target.dialogue[target.page][0])
+	titleNode.set_text(target.title)
 	panalNode.show()
 
 func end_dialogue():
@@ -52,10 +55,10 @@ func create_button(entry, i):
 	choice_buttons.append(choiceButton)
 	
 	#Resizes button and label correctly
-	choiceButton.set_position(Vector2(140, 20 + 60*i))
-	choiceButton.set_size(Vector2(400,50))
-	choiceLabel.set_position(Vector2(10, 10))
-	choiceLabel.set_size(Vector2(400,50))
+	choiceButton.set_position(Vector2(140, 20 + 110/currTarget.choices[entry].size()*i))
+	choiceButton.set_size(Vector2(400, 100/currTarget.choices[entry].size()))
+	choiceLabel.set_position(Vector2(10, 5))
+	choiceLabel.set_size(Vector2(400,110/currTarget.choices[entry].size()))
 	choiceLabel.set_autowrap(true)
 
 func branch_taken(choice):

@@ -1,0 +1,152 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Images/QuestionParts/14.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Questions/Parts/x.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Questions/Parts/xs.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Questions/Parts/y.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Questions/Parts/typeVarA.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Questions/Parts/14b.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Questions/Parts/14c.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Questions/Parts/typeVarList.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Questions/Parts/7f.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Questions/Parts/IntList.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Questions/Parts/Int.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Questions/Parts/12a.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/Check.gd" type="Script" id=14]
+[ext_resource path="res://Images/Solved.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Leave.gd" type="Script" id=16]
+[ext_resource path="res://Images/Next.png" type="Texture" id=17]
+[ext_resource path="res://Images/wrong.png" type="Texture" id=18]
+[ext_resource path="res://Images/correct.png" type="Texture" id=19]
+[ext_resource path="res://Images/computerBackground.png" type="Texture" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 99.5239, 48.4035 )
+
+[node name="14" type="Node2D"]
+
+[node name="Title" type="Label" parent="."]
+margin_left = 0.438354
+margin_right = 572.438
+margin_bottom = 51.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Finish the expression which returns the square of the odd numbers
+ in a list of the first 10 numbers"
+align = 1
+valign = 2
+
+[node name="Question" type="Sprite" parent="."]
+position = Vector2( 20, 50 )
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Slots" type="Node2D" parent="Question"]
+position = Vector2( -20, -50 )
+
+[node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 231.041, 70.8309 )
+
+[node name="Slot2" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 407.236, 70 )
+
+[node name="Slot3" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 585.234, 70 )
+
+[node name="Slot4" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 354.068, 107.388 )
+
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="12b" parent="Parts" instance=ExtResource( 3 )]
+position = Vector2( 122.572, 476.473 )
+
+[node name="12e" parent="Parts" instance=ExtResource( 3 )]
+position = Vector2( 263.056, 477.271 )
+
+[node name="10i" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 165.62, 475.895 )
+
+[node name="10j" parent="Parts" instance=ExtResource( 5 )]
+position = Vector2( 217.762, 476.837 )
+
+[node name="11b" parent="Parts" instance=ExtResource( 6 )]
+position = Vector2( 236.314, 381.831 )
+
+[node name="14b" parent="Parts" instance=ExtResource( 7 )]
+position = Vector2( 297.446, 379.701 )
+
+[node name="14c" parent="Parts" instance=ExtResource( 8 )]
+position = Vector2( 413.766, 381.363 )
+
+[node name="14a" parent="Parts" instance=ExtResource( 9 )]
+position = Vector2( 142.907, 379.701 )
+
+[node name="14d" parent="Parts" instance=ExtResource( 10 )]
+position = Vector2( 165.34, 432.045 )
+
+[node name="IntList" parent="Parts" instance=ExtResource( 11 )]
+position = Vector2( 539.225, 377.208 )
+
+[node name="Int" parent="Parts" instance=ExtResource( 12 )]
+position = Vector2( 70.6227, 379.701 )
+
+[node name="12a" parent="Parts" instance=ExtResource( 13 )]
+position = Vector2( 274.182, 432.045 )
+
+[node name="Solved" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 855.713, 159.431 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Solved"]
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Solved"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Leave" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 856.749, 437.049 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="Leave"]
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leave"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Incorrect" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="Correct" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="Background" type="Sprite" parent="."]
+z_index = -2
+texture = ExtResource( 20 )
+centered = false

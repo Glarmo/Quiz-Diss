@@ -1,0 +1,186 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Images/QuestionParts/10.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Questions/Parts/Int.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Questions/Parts/IntList.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Questions/Parts/x.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Questions/Parts/backArrow.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Questions/Parts/xs.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Questions/Parts/arrow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Questions/Parts/equals.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Questions/Parts/ys.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Questions/Parts/String.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Questions/Parts/y.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Questions/Parts/minus.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/Check.gd" type="Script" id=14]
+[ext_resource path="res://Images/Solved.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Leave.gd" type="Script" id=16]
+[ext_resource path="res://Images/Next.png" type="Texture" id=17]
+[ext_resource path="res://Images/wrong.png" type="Texture" id=18]
+[ext_resource path="res://Images/correct.png" type="Texture" id=19]
+[ext_resource path="res://Images/computerBackground.png" type="Texture" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 99.5239, 48.4035 )
+
+[node name="10" type="Node2D"]
+
+[node name="Title" type="Label" parent="."]
+margin_right = 572.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "The diff function returns the difference between two elements contained in lists"
+align = 1
+valign = 1
+
+[node name="Question" type="Sprite" parent="."]
+position = Vector2( 20, 50 )
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Slots" type="Node2D" parent="Question"]
+position = Vector2( -20, -50 )
+
+[node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 228.746, 67 )
+
+[node name="Slot2" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 453.136, 67 )
+
+[node name="Slot3" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 640.67, 67 )
+
+[node name="Slot4" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 310.84, 107 )
+
+[node name="Slot5" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 359.584, 107 )
+
+[node name="Slot6" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 412.357, 107 )
+
+[node name="Slot7" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 478.022, 107 )
+
+[node name="Slot8" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 533.95, 107 )
+
+[node name="Slot9" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 589.19, 107 )
+
+[node name="Slot10" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 661.529, 107 )
+
+[node name="Slot11" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 724.272, 107 )
+
+[node name="Slot12" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 788.742, 107 )
+
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="Int" parent="Parts" instance=ExtResource( 3 )]
+position = Vector2( 141.598, 375.245 )
+
+[node name="10a" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 143.387, 474.933 )
+
+[node name="10b" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 145.172, 333.939 )
+
+[node name="10c" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 369.155, 333.047 )
+
+[node name="10d" parent="Parts" instance=ExtResource( 5 )]
+position = Vector2( 245.562, 477.631 )
+
+[node name="10h" parent="Parts" instance=ExtResource( 6 )]
+position = Vector2( 244.662, 429.958 )
+
+[node name="10k" parent="Parts" instance=ExtResource( 6 )]
+position = Vector2( 466.861, 429.958 )
+
+[node name="10g" parent="Parts" instance=ExtResource( 5 )]
+position = Vector2( 294.503, 477.631 )
+
+[node name="10i" parent="Parts" instance=ExtResource( 7 )]
+position = Vector2( 352.602, 477.632 )
+
+[node name="arrow" parent="Parts" instance=ExtResource( 8 )]
+position = Vector2( 306.728, 429.958 )
+
+[node name="equals" parent="Parts" instance=ExtResource( 9 )]
+position = Vector2( 371.491, 429.059 )
+
+[node name="10l" parent="Parts" instance=ExtResource( 10 )]
+position = Vector2( 402.074, 477.631 )
+
+[node name="8a" parent="Parts" instance=ExtResource( 11 )]
+position = Vector2( 254.949, 332.917 )
+
+[node name="10f" parent="Parts" instance=ExtResource( 12 )]
+position = Vector2( 494.371, 473.846 )
+
+[node name="10j" parent="Parts" instance=ExtResource( 12 )]
+position = Vector2( 207.921, 477.416 )
+
+[node name="10e" parent="Parts" instance=ExtResource( 13 )]
+position = Vector2( 415.842, 429.228 )
+
+[node name="Solved" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 855.713, 159.431 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Solved"]
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Solved"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Leave" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 856.749, 437.049 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="Leave"]
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leave"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Incorrect" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="Correct" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="Background" type="Sprite" parent="."]
+z_index = -2
+texture = ExtResource( 20 )
+centered = false
