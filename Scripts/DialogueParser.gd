@@ -7,16 +7,20 @@ var camera
 var entry
 var imageHolder
 var button
+var time
 var choice_buttons = []
 
 func _ready():
 	#set_process_input(true)
+	time = get_node("Timer")
 	camera = get_node("../Player/KinematicBody2D/Camera2D")
 	panalNode = get_node("../CanvasLayer/Dialogue Box")
 	imageHolder = get_node("../CanvasLayer/Texture")
 	titleNode = get_node("../CanvasLayer/Dialogue Box/Panel/Title")
 	button = panalNode.get_node("Button")
 	button.connect("pressed", self, "button_pressed")
+	time.connect("timeout",self,"revert_state")
+	time.set_one_shot(true)
 	
 	if (panalNode.is_visible()):
 		panalNode.hide()
@@ -38,10 +42,14 @@ func start_dialogue(target):
 	panalNode.show()
 
 func end_dialogue():
-	Player_param.state = "default"
 	panalNode.hide()
 	imageHolder.set_texture(null)
 	currTarget.page = 0
+	time.set_wait_time(0.5)
+	time.start()
+
+func revert_state():
+	Player_param.state = "default"
 
 func create_button(entry, i):
 	var choiceButton = Button.new()
@@ -99,6 +107,6 @@ func add_to_journal(entry):
 		Player_param.dialogue.append(entry)
 
 func _input(event):
-	if event.is_action_pressed("ui_accept") and panalNode.get_node("Text").is_visible() and panalNode.is_visible() and currTarget != null:
+	if event.is_action_pressed("ui_select") and panalNode.get_node("Text").is_visible() and panalNode.is_visible() and currTarget != null:
 		button_pressed() #This allows the user to press the 'Enter' Key to move dialogue
 

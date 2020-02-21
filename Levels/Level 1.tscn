@@ -40,15 +40,14 @@ tile_data = PoolIntArray( -262130, 7, 0, -262124, 7, 0, -196592, 7, 0, -196583, 
 [node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Principio" parent="Characters" instance=ExtResource( 6 )]
-position = Vector2( 1413.92, 921.836 )
+position = Vector2( 1405.49, 911.301 )
 script = ExtResource( 7 )
 
 [node name="Book Of Functions" parent="Characters" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 261.563, 26.8361 )
+position = Vector2( 261.563, 31.1795 )
 scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 8 )
 
@@ -58,7 +57,7 @@ region_rect = Rect2( -0.444443, 99, 32.8889, 29.7778 )
 
 [node name="Immutable John" parent="Characters" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 1304.61, 925.706 )
+position = Vector2( 1295.77, 906.743 )
 script = ExtResource( 10 )
 
 [node name="Sprite" parent="Characters/Immutable John/StaticBody2D" index="1"]
@@ -66,12 +65,12 @@ region_rect = Rect2( 277, 179, 18, 26 )
 
 [node name="Dr Composer" parent="Characters" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 566.434, 54.3272 )
+position = Vector2( 571.646, 56.0646 )
 script = ExtResource( 11 )
 
 [node name="Ali" parent="Characters" instance=ExtResource( 6 )]
 editor/display_folded = true
-position = Vector2( 751.854, 58.5521 )
+position = Vector2( 726.57, 56.4451 )
 script = ExtResource( 12 )
 
 [node name="Sprite" parent="Characters/Ali/StaticBody2D" index="1"]

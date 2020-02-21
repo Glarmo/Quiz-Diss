@@ -1,0 +1,174 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Images/QuestionParts/19.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Questions/Parts/listFP.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Questions/Parts/x.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Questions/Parts/xs.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Questions/Parts/emptyList.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Questions/Parts/16h.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Questions/Parts/19a.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Questions/Parts/19e.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Questions/Parts/14b.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Questions/Parts/typeVarList.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Questions/Parts/append.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Questions/Parts/cons.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Questions/Parts/map.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scripts/Check.gd" type="Script" id=15]
+[ext_resource path="res://Images/Solved.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/Leave.gd" type="Script" id=17]
+[ext_resource path="res://Images/Next.png" type="Texture" id=18]
+[ext_resource path="res://Images/wrong.png" type="Texture" id=19]
+[ext_resource path="res://Images/correct.png" type="Texture" id=20]
+[ext_resource path="res://Images/computerBackground.png" type="Texture" id=21]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 99.5239, 48.4035 )
+
+[node name="19" type="Node2D"]
+
+[node name="Title" type="Label" parent="."]
+margin_left = 0.438354
+margin_right = 572.438
+margin_bottom = 51.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Finish the recursive map definition"
+align = 1
+valign = 1
+
+[node name="Question" type="Sprite" parent="."]
+position = Vector2( 20, 50 )
+z_index = -1
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Slots" type="Node2D" parent="Question"]
+position = Vector2( -20, -50 )
+
+[node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 208.609, 70 )
+
+[node name="Slot2" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 408.898, 70 )
+
+[node name="Slot3" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 542.134, 70 )
+
+[node name="Slot4" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 267.121, 108 )
+
+[node name="Slot5" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 323.589, 140 )
+
+[node name="Slot6" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 383.011, 140 )
+
+[node name="Slot7" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 449.879, 140 )
+
+[node name="Slot8" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 510, 140 )
+
+[node name="Slot9" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 580, 140 )
+
+[node name="Slot10" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 639.314, 140 )
+
+[node name="Parts" type="Node2D" parent="."]
+
+[node name="16d" parent="Parts" instance=ExtResource( 3 )]
+position = Vector2( 113.827, 437.03 )
+
+[node name="19f" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 92.2249, 481.896 )
+
+[node name="19j" parent="Parts" instance=ExtResource( 5 )]
+position = Vector2( 139.583, 482.727 )
+
+[node name="19d" parent="Parts" instance=ExtResource( 6 )]
+position = Vector2( 190.265, 482.726 )
+
+[node name="16h" parent="Parts" instance=ExtResource( 7 )]
+position = Vector2( 244.271, 481.895 )
+
+[node name="19a" parent="Parts" instance=ExtResource( 8 )]
+position = Vector2( 127.121, 361.422 )
+
+[node name="19e" parent="Parts" instance=ExtResource( 9 )]
+position = Vector2( 209.375, 399.641 )
+
+[node name="19c" parent="Parts" instance=ExtResource( 10 )]
+position = Vector2( 236.794, 358.929 )
+
+[node name="19b" parent="Parts" instance=ExtResource( 11 )]
+position = Vector2( 301.6, 357.268 )
+
+[node name="19i" parent="Parts" instance=ExtResource( 9 )]
+position = Vector2( 87.2397, 398.81 )
+
+[node name="append" parent="Parts" instance=ExtResource( 12 )]
+position = Vector2( 205.221, 437.86 )
+
+[node name="19g" parent="Parts" instance=ExtResource( 13 )]
+position = Vector2( 262.55, 435.368 )
+
+[node name="19h" parent="Parts" instance=ExtResource( 14 )]
+position = Vector2( 147.892, 400.472 )
+
+[node name="Solved" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 855.713, 159.431 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="Solved"]
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Solved"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Leave" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 856.749, 437.049 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="Leave"]
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leave"]
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Incorrect" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 19 )
+
+[node name="Correct" type="Sprite" parent="."]
+visible = false
+position = Vector2( 857.201, 228.748 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 20 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -0.830872, 0 )
+z_index = -2
+texture = ExtResource( 21 )
+centered = false

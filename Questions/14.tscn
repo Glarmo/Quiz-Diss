@@ -31,8 +31,8 @@ margin_left = 0.438354
 margin_right = 572.438
 margin_bottom = 51.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Finish the expression which returns the square of the odd numbers
- in a list of the first 10 numbers"
+text = "Finish the badZip function. It should zip
+ together two lists of any type into a list of tuples"
 align = 1
 valign = 2
 
