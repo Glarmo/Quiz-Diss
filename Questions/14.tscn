@@ -16,7 +16,7 @@
 [ext_resource path="res://Scripts/Check.gd" type="Script" id=14]
 [ext_resource path="res://Images/Solved.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/Leave.gd" type="Script" id=16]
-[ext_resource path="res://Images/Next.png" type="Texture" id=17]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=17]
 [ext_resource path="res://Images/wrong.png" type="Texture" id=18]
 [ext_resource path="res://Images/correct.png" type="Texture" id=19]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=20]
@@ -117,7 +117,6 @@ __meta__ = {
 }
 
 [node name="Leave" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 856.749, 437.049 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 16 )

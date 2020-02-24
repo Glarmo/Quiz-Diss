@@ -10,4 +10,4 @@ func _ready():
 	["Guards! Guards!",5],["No we're not heading to Ankh Morpork, guards are what we use to add conditions to recursive definitions. Take a look at this function",6],
 	[oddsRec,7],["We have the base case for an empty list which stops the recursion going on forever. The main body of the function is under the pattern for (x:xs). We denote different conditions using '|'",8],
 	["The first condition checks if x is odd. If this evaluates to true it will return 'x:oddsRec xs' attaching x to the list and calling the function again with the tail. If x is not odd then we don't attach it and simply go call the function again with the tail. Similar to pattern matching we run down the guards and when one evaluates to true we execute that line, 'Otherwise' will always evaluate to true, intuitively this means it should go last",9],
-	["Go and complete the next puzzle where you will be required to determine the output of a function",10]]
+	["Go and complete the next puzzle where you will be required to determine the output of a function. After that just move further down the path",10]]

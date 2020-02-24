@@ -56,7 +56,6 @@ func interact_loop():
 		#Adds an item to the inventory
 		if (target.is_in_group("Item") and Player_param.inv.find(target.get_name()) < 0):
 			Player_param.inv.append(target.get_name())
-			print(Player_param.inv)
 	if (!interactable and Input.is_action_just_pressed("ui_select")):
 		print("Nothing here")
 

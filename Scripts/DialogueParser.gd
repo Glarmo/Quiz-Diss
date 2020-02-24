@@ -92,6 +92,7 @@ func display_entry(entry):
 		for i in range(0, currTarget.choices[entry].size()):
 			create_button(entry,i)
 	elif (entry is Texture): #Display Image
+		add_to_journal([currTarget.title, entry])
 		imageHolder.set_texture(entry)
 	elif (entry is Resource):
 		get_tree().change_scene_to(entry)
@@ -108,5 +109,5 @@ func add_to_journal(entry):
 
 func _input(event):
 	if event.is_action_pressed("ui_select") and panalNode.get_node("Text").is_visible() and panalNode.is_visible() and currTarget != null:
-		button_pressed() #This allows the user to press the 'Enter' Key to move dialogue
+		button_pressed() #This allows the user to press the 'space' Key to move dialogue
 

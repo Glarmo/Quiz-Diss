@@ -2,6 +2,7 @@ extends Panel
 
 onready var charV = get_node("Characters/VBoxContainer")
 onready var diagV = get_node("Dialogue/VBoxContainer")
+onready var base = get_node("Dialogue/VBoxContainer/BaseImage")
 
 var button_size = Vector2(300,30)
 var buttons = []
@@ -11,7 +12,7 @@ func _input(event):
 		if Player_param.state == "journal":
 			self.hide()
 			Player_param.state = "default"
-			clear_labels()
+			clear_entries()
 		elif Player_param.state == "default":
 			self.show()
 			Player_param.state = "journal"
@@ -35,10 +36,18 @@ func add_title_button(title):
 	buttons.append(title)
 
 func display_title_text(title):
-	clear_labels()
+	clear_entries()
 	var dialogue = Player_param.dsearch(title)
 	for entry in dialogue:
-		add_label(entry)
+		if (entry is String):
+			add_label(entry)
+		elif (entry is Texture):
+			add_texture(entry)
+
+func add_texture(texture):
+	var image = base.duplicate(1)
+	diagV.add_child(image)
+	image.set_texture(texture)
 
 func add_label(text):
 	var dialogue_label = Label.new()
@@ -47,8 +56,10 @@ func add_label(text):
 	dialogue_label.set_size(button_size)
 	dialogue_label.set_autowrap(true)
 
-func clear_labels():
-	var labels = diagV.get_children()
-	for label in labels:
-		diagV.remove_child(label)
-		label.queue_free()
+func clear_entries():
+	var entries = diagV.get_children()
+	for entry in entries:
+		if (entry.name != "BaseImage"):
+			diagV.remove_child(entry)
+			entry.queue_free()
+		

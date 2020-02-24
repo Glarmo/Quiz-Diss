@@ -18,6 +18,6 @@ func dsearch(title):
 func tsearch():
 	var found = []
 	for entry in dialogue:
-		if !(entry[0] in found):
+		if !(entry[0] in found) and entry[0].similarity("Question") < 0.8:
 			found.append(entry[0])
 	return found

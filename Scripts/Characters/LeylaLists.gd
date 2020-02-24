@@ -6,6 +6,11 @@ func _ready():
 	var squareList = preload("res://Images/Terminal/SquareList.png")
 	var toLowerList = preload("res://Images/Terminal/toLowerList.png")
 	var labeled = preload("res://Images/Terminal/toLowerLabeled.png")
+	
+	var PJ1 = preload("res://Images/Gifts/philipJackson1.jpg")
+	var PJ2 = preload("res://Images/Gifts/philipJackson2.jpg")
+	var PJ3 = preload("res://Images/Gifts/philipJackson3.jpg")
+	
 	title = "Leyla Lists"
 	dialogue = [["Finally we get some real work done! What is a list you ask? A list is a simple data structure of a single type, take a look at these lists:",1],
 	[lists,2],["These are lists of different types. A list is a collection of elements all of the same type. The first is a list of ints, the second a list of characters and the third a list of booleans. If you've programmed before a list is essentially an array. Many functions you will come to see will output lists or operate on lists. The syntax of the list is simple. The whole list is contained by square brackets and individual elements are seperated by commas",3],
@@ -15,9 +20,14 @@ func _ready():
 	["On the second line we have the formal parameter 'xs' representing the *whole* list, but we need to square the individual elements. How do we do this? Well there are two parts to the square brackets to the right. There is the expression, on the left, and the generator, on the right",9],
 	["The generator is how we break up the list. Inside the generator is '<-' this can read as 'drawn from' so we can read the whole line as 'for each x drawn from xs return x*x'. The generator and the expression are seperated by this vertical bar '|'",10],
 	["Now let's take a look at the toLowerList function",11],[toLowerList,12],
-	["The type signature is almost identical to the last, the only difference being that we are operating with a list of characters rather than ints. Remember that a list of characters is simply a string like \"Hello\". On the second line, again it is very similar to the last. The formal parameter has changed from 'xs' to 'cs', these are functionally identical simply a change of name",13],
+	["The type signature is almost identical to the last, the only difference being that we are operating with a list of characters rather than ints. Remember that a list of characters is simply a string like \"Hello\". The second line is very similar to the last. The formal parameter has changed from 'xs' to 'cs', these are functionally identical simply a change of name",13],
 	["The generator equally has only changed name, 'x' to 'c' and 'xs' to 'cs'. The expression, to the left of the bar, calls the toLower function on the char 'c'. Remember that we can call other functions inside a function. The inbuilt toLower function simply takes a character and outputs the lowercase character",14],
-	[labeled,15],["This is called list comprehension, it is one way to program functions operating on lists, it allows us to break down lists and extract the information we need. Something of note, This style of programming operates on all elements at once rather than an element at a time, very impressive!",16],
+	[labeled,15],["This is called list comprehension, it is one way to program functions operating on lists, it allows us to break down lists and extract the information we need. Something of note, This style of programming operates on all elements at once rather than an element at a time",16],
 	["Okay that's all from me, I hope you understand basic lists. There is a computer just across, complete the puzzle and come back for a gift!",17]]
 	
-	secondDialogue = [[]] 
+	secondDialogue = [["Fantastic work, take a look at the wonderful works of Scottish Sculptor Philip Jackson as a reward",1],
+	[PJ1,2],[PJ2,3],[PJ3,4],["Cross the snowy path and you'll run into another hooded figure, speak to them about conditions",5]] 
+
+func action(inv):
+	if (search(Player_param.problems_completed, "7")):
+		dialogue = secondDialogue

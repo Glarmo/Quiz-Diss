@@ -9,11 +9,10 @@
 [ext_resource path="res://Scripts/Check.gd" type="Script" id=7]
 [ext_resource path="res://Images/Solved.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Leave.gd" type="Script" id=9]
-[ext_resource path="res://Images/Next.png" type="Texture" id=10]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=10]
 [ext_resource path="res://Images/wrong.png" type="Texture" id=11]
 [ext_resource path="res://Images/correct.png" type="Texture" id=12]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=13]
-
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 99.5239, 48.4035 )

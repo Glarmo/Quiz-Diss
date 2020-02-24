@@ -3,16 +3,16 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Images/Monkey/WalkLeft3.png" type="Texture" id=2]
 [ext_resource path="res://Images/Monkey/WalkUp7.png" type="Texture" id=3]
-[ext_resource path="res://Images/Monkey/WalkRight4.png" type="Texture" id=4]
-[ext_resource path="res://Images/Monkey/WalkRight6.png" type="Texture" id=5]
-[ext_resource path="res://Images/Monkey/WalkRight5.png" type="Texture" id=6]
-[ext_resource path="res://Images/Monkey/WalkDown0.png" type="Texture" id=7]
-[ext_resource path="res://Images/Monkey/WalkDown2.png" type="Texture" id=8]
-[ext_resource path="res://Images/Monkey/WalkUp6.png" type="Texture" id=9]
-[ext_resource path="res://Images/Monkey/WalkUp8.png" type="Texture" id=10]
-[ext_resource path="res://Images/Monkey/WalkLeft2.png" type="Texture" id=11]
-[ext_resource path="res://Images/Monkey/WalkLeft4.png" type="Texture" id=12]
-[ext_resource path="res://Images/Monkey/WalkDown1.png" type="Texture" id=13]
+[ext_resource path="res://Images/Monkey/WalkRight5.png" type="Texture" id=4]
+[ext_resource path="res://Images/Monkey/WalkDown0.png" type="Texture" id=5]
+[ext_resource path="res://Images/Monkey/WalkDown2.png" type="Texture" id=6]
+[ext_resource path="res://Images/Monkey/WalkLeft2.png" type="Texture" id=7]
+[ext_resource path="res://Images/Monkey/WalkLeft4.png" type="Texture" id=8]
+[ext_resource path="res://Images/Monkey/WalkDown1.png" type="Texture" id=9]
+[ext_resource path="res://Images/Monkey/WalkUp6.png" type="Texture" id=10]
+[ext_resource path="res://Images/Monkey/WalkUp8.png" type="Texture" id=11]
+[ext_resource path="res://Images/Monkey/WalkRight4.png" type="Texture" id=12]
+[ext_resource path="res://Images/Monkey/WalkRight6.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,34 +26,34 @@ animations = [ {
 "name": "IdleUp",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "WalkRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "IdleRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "WalkDown",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "WalkUp",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "WalkLeft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "IdleDown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "WalkUp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "WalkRight",
 "speed": 5.0
 } ]
 

@@ -15,7 +15,7 @@
 [ext_resource path="res://Scripts/Check.gd" type="Script" id=13]
 [ext_resource path="res://Images/Solved.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/Leave.gd" type="Script" id=15]
-[ext_resource path="res://Images/Next.png" type="Texture" id=16]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=16]
 [ext_resource path="res://Images/wrong.png" type="Texture" id=17]
 [ext_resource path="res://Images/correct.png" type="Texture" id=18]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=19]
@@ -34,6 +34,7 @@ align = 1
 valign = 1
 
 [node name="Question" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 20, 50 )
 z_index = -1
 texture = ExtResource( 1 )
@@ -43,6 +44,7 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+editor/display_folded = true
 position = Vector2( -20, -50 )
 
 [node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
@@ -73,6 +75,7 @@ position = Vector2( 340, 110 )
 position = Vector2( 420, 110 )
 
 [node name="Parts" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="3a" parent="Parts" instance=ExtResource( 3 )]
 position = Vector2( 327.793, 330.27 )

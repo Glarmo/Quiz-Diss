@@ -11,3 +11,5 @@ func action(inv):
 func load_question():
 	question = load("res://Questions/"+self.name.right(8)+".tscn") #This gives us the question number which is then used to instance the correct scene
 
+func load_menu():
+	question = load("res://Levels/Menu.tscn")

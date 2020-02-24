@@ -13,7 +13,7 @@
 [ext_resource path="res://Scripts/Check.gd" type="Script" id=11]
 [ext_resource path="res://Images/Solved.png" type="Texture" id=12]
 [ext_resource path="res://Scripts/Leave.gd" type="Script" id=13]
-[ext_resource path="res://Images/Next.png" type="Texture" id=14]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=14]
 [ext_resource path="res://Images/wrong.png" type="Texture" id=15]
 [ext_resource path="res://Images/correct.png" type="Texture" id=16]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=17]
@@ -81,16 +81,16 @@ position = Vector2( 138.753, 439.522 )
 position = Vector2( 500.174, 488.542 )
 
 [node name="15d" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 497.682, 353.113 )
+position = Vector2( 647.236, 438.691 )
 
 [node name="15e" parent="Parts" instance=ExtResource( 7 )]
 position = Vector2( 118.812, 398.81 )
 
 [node name="15f" parent="Parts" instance=ExtResource( 8 )]
-position = Vector2( 119.643, 360.591 )
+position = Vector2( 167.002, 481.896 )
 
 [node name="15g" parent="Parts" instance=ExtResource( 9 )]
-position = Vector2( 499.344, 392.163 )
+position = Vector2( 598.216, 484.388 )
 
 [node name="15h" parent="Parts" instance=ExtResource( 10 )]
 position = Vector2( 497.682, 438.691 )
@@ -114,7 +114,6 @@ __meta__ = {
 }
 
 [node name="Leave" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 856.749, 437.049 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 13 )

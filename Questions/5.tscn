@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Images/QuestionParts/5.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Questions/Parts/Error.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Questions/Parts/Picture.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Questions/Parts/Int.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Questions/Parts/Bool.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Questions/Parts/Int.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Questions/Parts/x.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Questions/Parts/5d.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Questions/Parts/5e.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/Check.gd" type="Script" id=7]
 [ext_resource path="res://Images/Solved.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Leave.gd" type="Script" id=9]
-[ext_resource path="res://Images/Next.png" type="Texture" id=10]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=10]
 [ext_resource path="res://Images/wrong.png" type="Texture" id=11]
 [ext_resource path="res://Images/correct.png" type="Texture" id=12]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=13]
@@ -26,7 +26,7 @@ __meta__ = {
 margin_right = 572.0
 margin_bottom = 51.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Identify what the output of this expression would be"
+text = "Finish the half definition"
 align = 1
 valign = 1
 
@@ -43,21 +43,42 @@ __meta__ = {
 position = Vector2( -30, -50 )
 
 [node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
-position = Vector2( 274.167, 221.827 )
+position = Vector2( 236.725, 68 )
+
+[node name="Slot2" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 381.813, 68 )
+
+[node name="Slot3" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 151.7, 105 )
+
+[node name="Slot4" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 229.705, 105 )
+
+[node name="Slot5" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 300, 105 )
+
+[node name="Slot6" parent="Question/Slots" instance=ExtResource( 2 )]
+position = Vector2( 350, 105 )
 
 [node name="Parts" type="Node2D" parent="."]
 
 [node name="5a" parent="Parts" instance=ExtResource( 3 )]
-position = Vector2( 205.932, 400 )
+position = Vector2( 103.746, 407.8 )
 
-[node name="Picture" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 360.38, 400 )
+[node name="5b" parent="Parts" instance=ExtResource( 3 )]
+position = Vector2( 104.526, 371.138 )
 
-[node name="2a" parent="Parts" instance=ExtResource( 5 )]
-position = Vector2( 503.128, 400 )
+[node name="5c" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 91.2651, 453.205 )
 
-[node name="Bool" parent="Parts" instance=ExtResource( 6 )]
-position = Vector2( 89.705, 400 )
+[node name="5f" parent="Parts" instance=ExtResource( 4 )]
+position = Vector2( 93.6052, 489.087 )
+
+[node name="5d" parent="Parts" instance=ExtResource( 5 )]
+position = Vector2( 154.449, 448.525 )
+
+[node name="5e" parent="Parts" instance=ExtResource( 6 )]
+position = Vector2( 148.988, 486.747 )
 
 [node name="Solved" type="Area2D" parent="."]
 editor/display_folded = true
@@ -78,7 +99,6 @@ __meta__ = {
 }
 
 [node name="Leave" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 856.749, 437.049 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 9 )

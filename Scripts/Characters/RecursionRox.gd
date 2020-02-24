@@ -2,17 +2,22 @@ extends "res://Scripts/Object.gd"
 func _ready():
 	var squareRec = preload("res://Images/Terminal/squareRec.png")
 	var productRec = preload("res://Images/Terminal/productRec.png")
+	
 	var sr1 = preload("res://Images/Terminal/squareRec1.png")
 	var sr2 = preload("res://Images/Terminal/squareRec2.png")
 	var sr3 = preload("res://Images/Terminal/squareRec3.png")
 	var sr4 = preload("res://Images/Terminal/squareRec4.png")
 	var sr5 = preload("res://Images/Terminal/squareRec5.png")
 	var sr6 = preload("res://Images/Terminal/squareRec6.png")
+	
 	var pr1 = preload("res://Images/Terminal/productRec1.png")
 	var pr2 = preload("res://Images/Terminal/productRec2.png")
 	var pr3 = preload("res://Images/Terminal/productRec3.png")
 	var pr4 = preload("res://Images/Terminal/productRec4.png")
 	var pr5 = preload("res://Images/Terminal/productRec5.png")
+	
+	var hardCoded = preload("res://Images/Gifts/hardcoded.jpg")
+	
 	title = "Recursion Rox"
 	dialogue = [["Hello! I'm going to teach you about recursion",1],["What is recursion?",2],["What is recursion?",3],["What is recursion?",4],["What is recursion?",5],
 	["Just joking!",6],["In the programming world, recursion is when a function calls itself one or more times. This is best explained with an example. We're going to redefine our old square function using recursion",7],
@@ -31,4 +36,11 @@ func _ready():
 	[pr3,30],["3 is added to the chain of the multiplication of the list and we call productRec with an empty list",31],
 	[pr4,32],["Recall that when we pass productRec an empty list we return 1. It should be clear why! If it was anything but 1 it would ruin the expression we've created",33],
 	[pr5,34],["And finally we get the output",35],
-	["Recursion should be clear now. Complete the puzzle next to me and come back for a gift",36]]
+	["Recursion may seem complicated at first but it's a very simple idea. Complete the puzzle next to me and come back for a gift",36]]
+	
+	secondDialogue = [["Amazing work, if you've ever wanted a visual representation on what it means to be hard coded take a look at this",1],
+	[hardCoded,2],["Head further along the path and you'll meet Pattern Pete, good luck!",3]]
+
+func action(inv):
+	if (search(Player_param.problems_completed, "16")):
+		dialogue = secondDialogue

@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Quiz"
-run/main_scene="res://Levels/Level 1.tscn"
-config/icon="res://icon.png"
+config/name="Haskell Quest"
+run/main_scene="res://Levels/Menu.tscn"
+config/icon="res://Images/computer.png"
 
 [autoload]
 

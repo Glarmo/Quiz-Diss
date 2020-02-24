@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Images/QuestionParts/17.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Slot.gd" type="Script" id=2]
 [ext_resource path="res://monofonto.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Questions/Parts/GT.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scripts/Check.gd" type="Script" id=5]
-[ext_resource path="res://Images/Solved.png" type="Texture" id=6]
-[ext_resource path="res://Scripts/Leave.gd" type="Script" id=7]
-[ext_resource path="res://Images/Next.png" type="Texture" id=8]
-[ext_resource path="res://Images/wrong.png" type="Texture" id=9]
-[ext_resource path="res://Images/correct.png" type="Texture" id=10]
-[ext_resource path="res://Images/computerBackground.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Check.gd" type="Script" id=4]
+[ext_resource path="res://Images/Solved.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Leave.gd" type="Script" id=6]
+[ext_resource path="res://Images/Leave.png" type="Texture" id=7]
+[ext_resource path="res://Images/wrong.png" type="Texture" id=8]
+[ext_resource path="res://Images/correct.png" type="Texture" id=9]
+[ext_resource path="res://Images/computerBackground.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 21
@@ -47,7 +46,7 @@ position = Vector2( -20, -50 )
 "Slot",
 "TextSlot",
 ]]
-position = Vector2( 292.171, 349.15 )
+position = Vector2( 243.151, 297.637 )
 script = ExtResource( 2 )
 
 [node name="Box" type="TextEdit" parent="Question/Slots/TextSlot"]
@@ -59,18 +58,14 @@ context_menu_enabled = false
 
 [node name="Parts" type="Node2D" parent="."]
 
-[node name="GT" parent="Parts" instance=ExtResource( 4 )]
-position = Vector2( 225.162, 368.069 )
-script = null
-
 [node name="Solved" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 853.221, 220.083 )
 scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="Solved"]
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -82,13 +77,12 @@ __meta__ = {
 }
 
 [node name="Leave" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 856.749, 437.049 )
 scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 7 )
+script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Leave"]
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -103,16 +97,16 @@ __meta__ = {
 visible = false
 position = Vector2( 857.201, 276.107 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Correct" type="Sprite" parent="."]
 visible = false
 position = Vector2( 857.201, 276.107 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( -0.748413, 1.87103 )
 z_index = -2
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 centered = false
