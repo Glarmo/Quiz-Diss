@@ -8,6 +8,9 @@ onready var incorrect = get_node("../Incorrect")
 onready var next = get_node("../Next")
 onready var leave = get_node("../Leave")
 
+var errors = 0
+var completed
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
 	and event.button_index == BUTTON_LEFT \
@@ -19,9 +22,11 @@ func _input_event(viewport, event, shape_idx):
 			print("Correct!")
 			correct.show()
 			add_to_completed(number)
+			completed = true
 			#leave.show()
 		else:
 			print("Incorrect!")
+			errors += 1
 			incorrect.show()
 
 func add_to_completed(num):

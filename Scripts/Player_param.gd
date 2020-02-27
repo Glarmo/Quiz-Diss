@@ -7,6 +7,26 @@ var player_pos = Vector2()
 var current_scene
 var dialogue = []
 var inv = []
+var stats = File.new()
+var stat_entries = []
+
+func _ready():
+	if !(stats.file_exists("user://stats.txt")):
+		stats.open("user://stats.txt", File.WRITE)
+		print(stats.get_path_absolute())
+		stats.close()
+
+func log_stats(num, time, error, complete):
+	stat_entries.append(str("(", num, ": Time: ", time, ", Errors: ", error, ", Completed: ", complete, ")"))
+	stats.open("user://stats.txt", File.WRITE)
+	stats.store_string(create_entry())
+	stats.close()
+
+func create_entry():
+	var long_string = "Stats:\n"
+	for entry in stat_entries:
+		long_string = str(long_string,"\n",entry)
+	return long_string
 
 func dsearch(title):
 	var found = []

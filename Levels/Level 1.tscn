@@ -103,6 +103,7 @@ position = Vector2( 1284.6, 557.284 )
 script = ExtResource( 18 )
 
 [node name="Return" parent="." instance=ExtResource( 13 )]
+editor/display_folded = true
 position = Vector2( 1410.53, 910.299 )
 script = ExtResource( 19 )
 
