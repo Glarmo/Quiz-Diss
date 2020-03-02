@@ -10,12 +10,6 @@ var inv = []
 var stats = File.new()
 var stat_entries = []
 
-func _ready():
-	if !(stats.file_exists("user://stats.txt")):
-		stats.open("user://stats.txt", File.WRITE)
-		print(stats.get_path_absolute())
-		stats.close()
-
 func log_stats(num, time, error, complete):
 	stat_entries.append(str("(", num, ": Time: ", time, ", Errors: ", error, ", Completed: ", complete, ")"))
 	stats.open("user://stats.txt", File.WRITE)
@@ -41,3 +35,7 @@ func tsearch():
 		if !(entry[0] in found) and entry[0].similarity("Question") < 0.8:
 			found.append(entry[0])
 	return found
+
+func get_dir():
+	stats.open("user://stats.txt", File.READ)
+	return stats.get_path_absolute()

@@ -39,7 +39,7 @@ var cheatSheet = [["PARTS NEEDED TO SOLVE QUESTION"],
 #q17
 [["10"]],
 #q18
-[["wor"]],
+[["\"wor\""]],
 #q19
 [["19a"],["19b"],["19c"],["19d"],["19e","19i"],["19f"],["19g"],["19h"],["19e","19i"],["19j"]],
 #q20
@@ -79,6 +79,7 @@ func check_solution():
 				#Most feedback will be question specific but some can be general i.e. "Remember what x just told you!"
 				print(name +"/"+ answer)
 				print(cheatSheet[p_number][s_number])
+				empty_slot(area)
 				return false
 
 #Runs through a list and checks if an item exists in it
@@ -97,3 +98,6 @@ func unfilled():
 
 func is_occupied():
 	return occupied
+
+func empty_slot(area):
+	area.position = area.ogPos

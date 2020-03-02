@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
 [ext_resource path="res://monofonto.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,10 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 34
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -57,8 +61,20 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="Controls" type="Sprite" parent="."]
-position = Vector2( 39.3793, 231.263 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 398.265, 118.147 )
+scale = Vector2( 0.344467, 0.412525 )
 z_index = -1
 texture = ExtResource( 4 )
 centered = false
+
+[node name="Directory" type="Label" parent="."]
+margin_left = 22.6231
+margin_top = 367.518
+margin_right = 200.0
+margin_bottom = 499.518
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "Stats Directory:
+"
+autowrap = true

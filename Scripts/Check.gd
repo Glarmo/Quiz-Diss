@@ -5,11 +5,11 @@ onready var slots = get_tree().get_nodes_in_group("Slot")
 
 onready var correct = get_node("../Correct")
 onready var incorrect = get_node("../Incorrect")
-onready var next = get_node("../Next")
+#onready var next = get_node("../Next")
 onready var leave = get_node("../Leave")
 
 var errors = 0
-var completed
+var completed = false
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton \
@@ -23,7 +23,6 @@ func _input_event(viewport, event, shape_idx):
 			correct.show()
 			add_to_completed(number)
 			completed = true
-			#leave.show()
 		else:
 			print("Incorrect!")
 			errors += 1

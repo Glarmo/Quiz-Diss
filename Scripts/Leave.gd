@@ -1,5 +1,5 @@
 extends Area2D
-onready var question = get_node("../../../Question"+get_parent().get_name())
+#onready var question = get_node("../../../Question"+get_parent().get_name())
 onready var solved = get_node("../Solved")
 onready var q_num = get_parent().get_name()
 onready var time_start = OS.get_unix_time()
