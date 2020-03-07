@@ -20,5 +20,5 @@ func _ready():
 	[MiM,2],["Head on down the path and you'll find two more questions on conditions. Further down I think you'll run into Type Tom. Good luck!",3]]
 
 func action(inv):
-	if (search(Player_param.problems_completed, "8")):
+	if (search(Player_param.problems_completed, "Question8")):
 		dialogue = secondDialogue

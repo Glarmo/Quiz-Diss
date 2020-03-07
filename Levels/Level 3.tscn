@@ -58,7 +58,6 @@ z_index = -6
 texture = ExtResource( 6 )
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Link Liz" parent="Characters" instance=ExtResource( 7 )]
 position = Vector2( 545.379, 222.79 )

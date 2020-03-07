@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Images/QuestionParts/19.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Images/wrong.png" type="Texture" id=19]
 [ext_resource path="res://Images/correct.png" type="Texture" id=20]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=21]
+[ext_resource path="res://Objects/Help.tscn" type="PackedScene" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 99.5239, 48.4035 )
@@ -171,3 +172,9 @@ position = Vector2( -0.830872, 0 )
 z_index = -2
 texture = ExtResource( 21 )
 centered = false
+
+[node name="Help" parent="." instance=ExtResource( 22 )]
+margin_left = 17.4479
+margin_top = 13.2937
+margin_right = 61.4479
+margin_bottom = 51.2937

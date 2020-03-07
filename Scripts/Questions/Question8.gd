@@ -4,4 +4,4 @@ func _ready():
 	load_question()
 	title = "Question 8"
 	dialogue = [["In this question you will define a function which takes a string and outputs all the uppercase letters in that string. You will also be tested on how to construct the generator of the function",1],
-	[question,2]]
+	[question,2],["I think Cashmira may gift for you or you could just head down the path to the next question",3]]

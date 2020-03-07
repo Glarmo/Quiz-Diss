@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/help.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Help.gd" type="Script" id=2]
+[ext_resource path="res://monofonto.ttf" type="DynamicFontData" id=3]
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="Help" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+icon = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_left = 49.5848
+margin_top = 41.4033
+margin_right = 649.585
+margin_bottom = 341.403
+
+[node name="Description" type="Label" parent="Panel"]
+margin_left = 9.20367
+margin_top = 7.66971
+margin_right = 589.204
+margin_bottom = 287.67
+custom_fonts/font = SubResource( 1 )
+autowrap = true

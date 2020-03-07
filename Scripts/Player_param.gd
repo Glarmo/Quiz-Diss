@@ -32,7 +32,7 @@ func dsearch(title):
 func tsearch():
 	var found = []
 	for entry in dialogue:
-		if !(entry[0] in found) and entry[0].similarity("Question") < 0.8:
+		if !(entry[0] in found) and entry[0].similarity("Question") < 0.8: #This prevents journal entries of the questions
 			found.append(entry[0])
 	return found
 

@@ -4,4 +4,4 @@ func _ready():
 	load_question()
 	title = "Question 13"
 	dialogue = [["In this question you must determine the output of an expression. You can write the output in the box provided. You cannot leave any empty space in the answer and the syntax must be correct!",1],
-	[question,2]]
+	[question,2],["U-u-u-ultra good job! Go try the next question on the path",3]]

@@ -35,24 +35,24 @@ custom_fonts/font = SubResource( 1 )
 text = "Created by Guillermo"
 
 [node name="Level 1" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 100.539
-margin_right = 374.011
-margin_bottom = 120.539
+margin_left = 38.9717
+margin_top = 145.785
+margin_right = 372.983
+margin_bottom = 165.785
 text = "Level 1: Application, Composition and Definitions"
 
 [node name="Level 2" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 150.0
-margin_right = 416.721
-margin_bottom = 163.869
+margin_left = 38.9717
+margin_top = 195.246
+margin_right = 415.693
+margin_bottom = 215.246
 text = "Level 2: Data Types, Lists, Conditions and Type Variables"
 
 [node name="Level 3" type="Button" parent="."]
-margin_left = 40.0
-margin_top = 200.0
-margin_right = 466.441
-margin_bottom = 212.901
+margin_left = 38.9717
+margin_top = 245.246
+margin_right = 465.413
+margin_bottom = 265.246
 text = "Level 3: Recursion, Pattern Matching and Higher Order Functions"
 
 [node name="Background" type="Sprite" parent="."]

@@ -16,7 +16,7 @@ func _ready():
 	[lists,2],["These are lists of different types. A list is a collection of elements all of the same type. The first is a list of ints, the second a list of characters and the third a list of booleans. If you've programmed before a list is essentially an array. Many functions you will come to see will output lists or operate on lists. The syntax of the list is simple. The whole list is contained by square brackets and individual elements are seperated by commas",3],
 	["See simple! Now let's look at some functions that operate on lists",4],[listFunctions,5],
 	["These are the squareList and toLowerList functions. The squareList function takes a list of ints and outputs a list of all elements squared. The toLowerList takes a list of characters and applies the toLower function on them, converting them to lowercase. Pull out your microscope as we are going to take a closer look at each of these functions!",6],
-	[squareList,7],["Don't worry, there are a few new things but we'll tackle them one at a time. The type signature has changed slightly from what we've seen before. Recall that we denote lists with square brackets and such this new type signature simply tells us that the function takes a list of ints as input and outputs the same.",8],
+	[squareList,7],["Don't worry, there are a few new things but we'll tackle them one at a time. The type signature has changed slightly from what we've seen before. Recall that we denote lists with square brackets and as such this new type signature simply tells us that the function takes a list of ints as input, and outputs the same.",8],
 	["On the second line we have the formal parameter 'xs' representing the *whole* list, but we need to square the individual elements. How do we do this? Well there are two parts to the square brackets to the right. There is the expression, on the left, and the generator, on the right",9],
 	["The generator is how we break up the list. Inside the generator is '<-' this can read as 'drawn from' so we can read the whole line as 'for each x drawn from xs return x*x'. The generator and the expression are seperated by this vertical bar '|'",10],
 	["Now let's take a look at the toLowerList function",11],[toLowerList,12],
@@ -29,5 +29,5 @@ func _ready():
 	[PJ1,2],[PJ2,3],[PJ3,4],["Cross the snowy path and you'll run into another hooded figure, speak to them about conditions",5]] 
 
 func action(inv):
-	if (search(Player_param.problems_completed, "7")):
+	if (search(Player_param.problems_completed, "Question7")):
 		dialogue = secondDialogue

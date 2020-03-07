@@ -16,5 +16,5 @@ func _ready():
 	[harry,2],["I hope you've enjoyed, whatever this was. Please remember to fill out the form that was attached with the game. Thank you :)",3]]
 
 func action(inv):
-	if(search(Player_param.problems_completed, "24")):
+	if(search(Player_param.problems_completed, "Question24")):
 		dialogue = secondDialogue

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Images/QuestionParts/8.png" type="Texture" id=1]
 [ext_resource path="res://Objects/Slot.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Images/wrong.png" type="Texture" id=22]
 [ext_resource path="res://Images/correct.png" type="Texture" id=23]
 [ext_resource path="res://Images/computerBackground.png" type="Texture" id=24]
+[ext_resource path="res://Objects/Help.tscn" type="PackedScene" id=25]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 99.5239, 48.4035 )
@@ -31,8 +32,10 @@ extents = Vector2( 99.5239, 48.4035 )
 [node name="8" type="Node2D"]
 
 [node name="Title" type="Label" parent="."]
-margin_right = 572.0
-margin_bottom = 51.0
+margin_left = 45.2599
+margin_top = 0.905212
+margin_right = 617.26
+margin_bottom = 51.9052
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Finish the definition of upperList which returns all upper case letters in a string"
 align = 1
@@ -187,3 +190,9 @@ texture = ExtResource( 23 )
 z_index = -2
 texture = ExtResource( 24 )
 centered = false
+
+[node name="Help" parent="." instance=ExtResource( 25 )]
+margin_left = 16.2936
+margin_top = 15.3884
+margin_right = 60.2936
+margin_bottom = 53.3884

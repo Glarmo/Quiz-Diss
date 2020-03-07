@@ -27,6 +27,6 @@ func _ready():
 	choices = [[["Yes, Ali explained them!",8],["No, Ali tried to explain but I don't think I understood",7]]] 
 	
 func action(inv):
-	if (search(Player_param.problems_completed, "1")):
+	if (search(Player_param.problems_completed, "Question1")):
 		dialogue = secondDialogue
 

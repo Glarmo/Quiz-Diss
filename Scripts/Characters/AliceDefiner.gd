@@ -25,7 +25,7 @@ func _ready():
 	choices = [[["You mentioned a gift....?",3],["Okay thank you, you've been a great help!",6]]]
 
 func action(inv):
-	if (search(Player_param.problems_completed, "3")):
+	if (search(Player_param.problems_completed, "Question3")):
 		dialogue = thirdDialogue
-	elif (search(Player_param.problems_completed, "2")):
+	elif (search(Player_param.problems_completed, "Question2")):
 		dialogue = secondDialogue

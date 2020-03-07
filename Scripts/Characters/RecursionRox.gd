@@ -42,5 +42,5 @@ func _ready():
 	[hardCoded,2],["Head further along the path and you'll meet Pattern Pete, good luck!",3]]
 
 func action(inv):
-	if (search(Player_param.problems_completed, "16")):
+	if (search(Player_param.problems_completed, "Question16")):
 		dialogue = secondDialogue
