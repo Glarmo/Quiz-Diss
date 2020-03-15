@@ -54,7 +54,6 @@ z_index = -6
 texture = ExtResource( 6 )
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Type Tom" parent="Characters" instance=ExtResource( 7 )]
 position = Vector2( 671.47, 6.32269 )
@@ -81,7 +80,6 @@ position = Vector2( 2045.51, 577.727 )
 script = ExtResource( 11 )
 
 [node name="Questions" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Question6" parent="Questions" instance=ExtResource( 12 )]
 position = Vector2( 851.974, 26.7286 )

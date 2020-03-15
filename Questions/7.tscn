@@ -40,6 +40,7 @@ align = 1
 valign = 1
 
 [node name="Question" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 20, 50 )
 z_index = -1
 texture = ExtResource( 1 )
@@ -49,6 +50,7 @@ __meta__ = {
 }
 
 [node name="Slots" type="Node2D" parent="Question"]
+editor/display_folded = true
 position = Vector2( -20, -50 )
 
 [node name="Slot1" parent="Question/Slots" instance=ExtResource( 2 )]
@@ -76,6 +78,7 @@ position = Vector2( 693.408, 105 )
 position = Vector2( 756.23, 105 )
 
 [node name="Parts" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Int" parent="Parts" instance=ExtResource( 3 )]
 position = Vector2( 141.598, 375.245 )
@@ -141,6 +144,7 @@ __meta__ = {
 }
 
 [node name="Leave" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 856.749, 437.049 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 20 )

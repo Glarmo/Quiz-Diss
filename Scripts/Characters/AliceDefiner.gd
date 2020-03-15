@@ -18,8 +18,8 @@ func _ready():
 	["One thing of note: The 'x' refers to the first input and 'y' the second. For example if we called 'multi 3 5' the x would refer to the 3 and the y would refer to the 5. It's important to recognise this as later we will begin to use functions operating on multiple types and you best get them in the right order!",5],
 	["Jolly eggs, you should try the next question by the mushrooms and come back one last time for a gift!",6]]
 	
-	thirdDialogue = [["Another home run! Working with more than one input parameter isn't so bad. I need you to do two more problems for me and then you'll be finised with the level!",1],
-	["These last problems should summerise all you've learned so far: Function calling, function composition and function definitions. Good luck!",2],[0,0],["ah! I completely forgot, your gift are these two pictures, I hope you enjoy them as much as I did!",4],
+	thirdDialogue = [["Another home run! Working with more than one input parameter isn't so bad. I need you to do two more problems for me and then you'll be finished with the level!",1],
+	["These last problems should summarize all you've learned so far: Function calling, function composition and function definitions. Good luck!",2],[0,0],["ah! I completely forgot, your gift are these two pictures, I hope you enjoy them as much as I did!",4],
 	[noFish1,5],[noFish2,6],["On your way then, goodbye!",7]]
 	
 	choices = [[["You mentioned a gift....?",3],["Okay thank you, you've been a great help!",6]]]

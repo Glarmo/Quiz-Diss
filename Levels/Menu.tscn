@@ -26,6 +26,18 @@ margin_bottom = 67.4375
 custom_fonts/font = SubResource( 1 )
 text = "Haskell Quest"
 
+[node name="Subtitle" type="Label" parent="."]
+margin_left = 37.1894
+margin_top = 113.167
+margin_right = 337.189
+margin_bottom = 166.167
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 2 )
+text = "Click on a level to start:
+"
+autowrap = true
+
 [node name="Credit" type="Label" parent="."]
 margin_left = 590.791
 margin_top = 478.661

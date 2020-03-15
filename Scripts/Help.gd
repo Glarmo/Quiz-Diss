@@ -15,7 +15,7 @@ var help_array = ["",
 #q6
 "The function thisKapital returns a true or false value depending on if the first character in a string is capitalized. Note that the formal parameter is split into two parts we will cover this later but you may be able to intuit how it works",
 #q7
-"The sumTuple function takes a list of tuples and sums the values inside the tuple together. We haven't told you exactly what a tuple list looks like but put together what a tuple looks like and how we notate lists!",
+"The sumTuple function takes a list of tuples and sums the values inside the tuple together. The output is a integer list of these sums. We haven't told you exactly what a tuple list looks like but put together what a tuple looks like and how we notate lists!",
 #q8
 "This function takes a string and outputs a list of all the upper case characters in the string. In this question you will need to place the bar seperating the expression and generator. Recall that after the comma you should put the condition!",
 #q9
@@ -49,7 +49,7 @@ var help_array = ["",
 #q23
 "This function takes a function and applies it twice to a given input. Given the formal parameter is the input a list or just a single element?",
 #q24
-"This function takes a list and reverse the order of elements so that the first element is how the last. This is a test on your function composition as well as your use of concatenate and append. Take a look at your journal entry for Link Liz if you need a recap",
+"This function takes a list and reverse the order of elements so that the first element is how the last. This is a test on your function composition as well as your use of concatenate and append. Take a look at your journal entry for Link Liz if you need a recap. Remember you can have a list with only a single element!",
 ]
 
 func _ready():

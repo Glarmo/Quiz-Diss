@@ -9,8 +9,8 @@ extents = Vector2( 28.6148, 28.759 )
 extents = Vector2( 16.0511, 15.9222 )
 
 [node name="Question" type="Node2D" groups=[
-"Interactable",
 "Question",
+"Interactable",
 ]]
 
 [node name="Range" type="Area2D" parent="."]

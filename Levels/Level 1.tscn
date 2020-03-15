@@ -41,7 +41,6 @@ tile_data = PoolIntArray( -262130, 7, 0, -262124, 7, 0, -196592, 7, 0, -196583, 
 [node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
 
 [node name="Characters" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Book Of Functions" parent="Characters" instance=ExtResource( 6 )]
 editor/display_folded = true
